@@ -1,0 +1,209 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 1.25rem; }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px; }
+
+.nav {
+  width: 100%;
+  height: 50px;
+  padding: 0 1rem;
+  text-align: right; }
+  .nav__button {
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #8e8e8e;
+    text-decoration: none;
+    transition: color .1s ease; }
+  .nav__button:hover {
+    text-decoration: none;
+    color: #000; }
+
+.block {
+  width: calc(100% - 80px);
+  margin: 0 2rem;
+  padding: 0 0 2rem 0; }
+
+.block--intro {
+  height: 650px;
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif; }
+  .block--intro__left {
+    width: 480px;
+    height: auto;
+    margin: 50px 0 0 0;
+    z-index: 2; }
+  .block--intro__center {
+    width: 360px;
+    padding-top: 300px;
+    text-align: center; }
+    .block--intro__center-inside {
+      display: inline-block;
+      text-align: left;
+      height: 320px;
+      display: none; }
+    .block--intro__center-h1 {
+      font-size: 1.6rem;
+      height: 30px;
+      margin: 0;
+      position: relative;
+      color: rgba(0, 0, 0, 0);
+      transform: translateX(-180px);
+      animation: slide-intro 1s ease 0.2s 1 normal forwards; }
+      .block--intro__center-h1 > span:nth-child(1) {
+        animation: letter1 0.4s linear 1100ms normal forwards; }
+@keyframes letter1 {
+  0% {
+    color: black; }
+  1% {
+    color: #C22326; }
+  99% {
+    color: #C22326; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(2) {
+        animation: letter2 0.4s linear 1200ms normal forwards; }
+@keyframes letter2 {
+  0% {
+    color: black; }
+  1% {
+    color: #fe6d2a; }
+  99% {
+    color: #fe6d2a; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(3) {
+        animation: letter3 0.4s linear 1300ms normal forwards; }
+@keyframes letter3 {
+  0% {
+    color: black; }
+  1% {
+    color: #fda432; }
+  99% {
+    color: #fda432; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(4) {
+        animation: letter4 0.4s linear 1400ms normal forwards; }
+@keyframes letter4 {
+  0% {
+    color: black; }
+  1% {
+    color: #017886; }
+  99% {
+    color: #017886; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(5) {
+        animation: letter5 0.4s linear 1500ms normal forwards; }
+@keyframes letter5 {
+  0% {
+    color: black; }
+  1% {
+    color: #801638; }
+  99% {
+    color: #801638; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(6) {
+        animation: letter6 0.4s linear 1600ms normal forwards; }
+@keyframes letter6 {
+  0% {
+    color: black; }
+  1% {
+    color: #9cc83b; }
+  99% {
+    color: #9cc83b; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(7) {
+        animation: letter7 0.4s linear 1700ms normal forwards; }
+@keyframes letter7 {
+  0% {
+    color: black; }
+  1% {
+    color: #fbe839; }
+  99% {
+    color: #fbe839; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(8) {
+        animation: letter8 0.4s linear 1800ms normal forwards; }
+@keyframes letter8 {
+  0% {
+    color: black; }
+  1% {
+    color: #f13f4f; }
+  99% {
+    color: #f13f4f; }
+  100% {
+    color: black; } }
+      .block--intro__center-h1 > span:nth-child(9) {
+        animation: letter9 0.4s linear 1900ms normal forwards; }
+@keyframes letter9 {
+  0% {
+    color: black; }
+  1% {
+    color: #70B7BA; }
+  99% {
+    color: #70B7BA; }
+  100% {
+    color: black; } }
+    .block--intro__center-h2-sect {
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .block--intro__center-h2 {
+      font-size: 1rem;
+      margin: 0.25rem 0;
+      position: relative;
+      color: rgba(0, 0, 0, 0);
+      transform: translateX(-180px);
+      animation: slide-intro 1s ease 0.4s 1 normal forwards; }
+    .block--intro__center-h1::before, .block--intro__center-h2::before {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 200px;
+      border-top: 2px solid #000;
+      top: calc(50% - 2px);
+      left: -210px; }
+    .block--intro__center-h1::after, .block--intro__center-h2::after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 5px;
+      top: calc(50% - 6px);
+      left: -15px;
+      background-color: #000; }
+
+.block--not-last {
+  padding-bottom: calc(2rem - 2px);
+  border-bottom: 2px solid #000;
+  margin-bottom: 2rem; }
+
+@keyframes slide-intro {
+  0% {
+    transform: translateX(-180px);
+    color: rgba(0, 0, 0, 0); }
+  50% {
+    color: rgba(0, 0, 0, 0); }
+  100% {
+    transform: translateX(0);
+    color: black; } }
+
+/*# sourceMappingURL=styles.css.map */
