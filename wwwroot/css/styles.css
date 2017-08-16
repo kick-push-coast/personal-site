@@ -3,7 +3,8 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  display: none; }
 
 .container {
   margin: 0 auto;
@@ -434,8 +435,11 @@ html {
     left: -12px;
     top: calc(50% - 3px); } }
 .block--divided {
-  padding-bottom: 2rem; }
+  margin-bottom: 2rem; }
 
+@media only screen and (max-width: 1200px) {
+  .block--intro {
+    height: 650px; } }
 @keyframes slide-intro {
   0% {
     transform: translateX(-180px);

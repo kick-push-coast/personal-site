@@ -9,6 +9,7 @@ $intro-colors: #C22326 #fe6d2a #fda432 #017886 #801638 #9cc83b #fbe839 #f13f4f #
 
 html {
    font-size: 1.25rem;
+   display: none;
 }
 
 .container {
@@ -304,7 +305,13 @@ html {
 }
 
 .block--divided {
-   padding-bottom: 2rem;
+   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+   .block--intro {
+      height: 650px;
+   }
 }
 
 @keyframes slide-intro {

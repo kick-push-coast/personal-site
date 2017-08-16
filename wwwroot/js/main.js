@@ -2,6 +2,7 @@ var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills
 var offsets = [];
 
 window.onload = function(){
+   document.querySelector('html').style.display = 'block';
    var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile'));
    setOffsets();
    checkAnimation();
@@ -12,11 +13,7 @@ window.onload = function(){
 function setOffsets() {
    for (var i = 0; i < tiles.length; i++) {
       var tile = tiles[i];
-      var styles = window.getComputedStyle(tile);
-      var margin = parseFloat(styles['marginTop']) +
-               parseFloat(styles['marginBottom']);
-
-      offsets[i] = tile.offsetTop + tile.clientHeight - 20;
+      offsets[i] = tile.offsetTop + tile.clientHeight;
    }
 };
 
