@@ -76,7 +76,7 @@ html {
       margin: 0;
       position: relative;
       color: rgba(0, 0, 0, 0);
-      transform: translateX(-180px);
+      transform: translateX(-200px);
       animation: slide-intro 1s ease 0.2s 1 normal forwards; }
       .block--intro__center-h1 > span:nth-child(1) {
         animation: letter1 0.4s linear 1100ms normal forwards; }
@@ -187,16 +187,20 @@ html {
       margin: 0.25rem 0;
       position: relative;
       color: rgba(0, 0, 0, 0);
-      transform: translateX(-180px);
+      transform: translateX(-200px);
       animation: slide-intro 1s ease 0.4s 1 normal forwards; }
+    .block--intro__center-h1:before {
+      animation: grow-intro 1s ease 0.2s 1 normal forwards; }
+    .block--intro__center-h2:before {
+      animation: grow-intro 1s ease 0.4s 1 normal forwards; }
     .block--intro__center-h1::before, .block--intro__center-h2::before {
       content: '';
       position: absolute;
       height: 0;
-      width: 200px;
+      width: 0px;
       border-top: 1px solid #000;
       top: calc(50% - 1px);
-      left: -210px; }
+      left: -10px; }
     .block--intro__center-h1::after, .block--intro__center-h2::after {
       content: '';
       position: absolute;
@@ -227,7 +231,7 @@ html {
   .block--skills__icon--animate::after {
     display: block !important; }
   .block--skills__icon--1-child {
-    margin-bottom: 64px; }
+    margin-bottom: 74px; }
   .block--skills__icon--1-child::after {
     content: '';
     display: none;
@@ -238,7 +242,7 @@ html {
     bottom: 10px;
     left: calc(50% - 1px);
     z-index: -1;
-    animation: slide-skills-vert1 0.3673267327s linear 0.1s 1 normal forwards; }
+    animation: slide-skills-vert1 0.2623762376s linear 0.1s 1 normal forwards; }
 @keyframes slide-skills-vert1 {
   0% {
     height: 0;
@@ -247,7 +251,7 @@ html {
     height: 52px;
     bottom: -42px; } }
   .block--skills__icon--2-child {
-    margin-bottom: 88px; }
+    margin-bottom: 98px; }
   .block--skills__icon--2-child::after {
     content: '';
     display: none;
@@ -258,7 +262,7 @@ html {
     bottom: 10px;
     left: calc(50% - 1px);
     z-index: -1;
-    animation: slide-skills-vert2 0.5336633663s linear 0.1s 1 normal forwards; }
+    animation: slide-skills-vert2 0.3811881188s linear 0.1s 1 normal forwards; }
 @keyframes slide-skills-vert2 {
   0% {
     height: 0;
@@ -267,7 +271,7 @@ html {
     height: 76px;
     bottom: -66px; } }
   .block--skills__icon--3-child {
-    margin-bottom: 112px; }
+    margin-bottom: 122px; }
   .block--skills__icon--3-child::after {
     content: '';
     display: none;
@@ -278,7 +282,7 @@ html {
     bottom: 10px;
     left: calc(50% - 1px);
     z-index: -1;
-    animation: slide-skills-vert3 0.7s linear 0.1s 1 normal forwards; }
+    animation: slide-skills-vert3 0.5s linear 0.1s 1 normal forwards; }
 @keyframes slide-skills-vert3 {
   0% {
     height: 0;
@@ -322,7 +326,7 @@ html {
       display: flex; }
   .block--skills__h3-1 {
     color: rgba(0, 0, 0, 0);
-    animation: skills-opacity1 0.4s ease 1.5s 1 normal forwards; }
+    animation: skills-opacity1 0.4s ease 1.1s 1 normal forwards; }
   .block--skills__h3-1::before {
     content: '';
     position: absolute;
@@ -331,7 +335,7 @@ html {
     border-top: 1px solid #000;
     top: calc(50% - 1px);
     left: -98px;
-    animation: slide-skills-hor 0.7s linear 0.4673267327s 1 normal forwards; }
+    animation: slide-skills-hor 0.5s linear 0.3623762376s 1 normal forwards; }
   .block--skills__h3-1::after {
     content: '';
     position: absolute;
@@ -342,7 +346,7 @@ html {
     left: -101px;
     background-color: #000;
     z-index: -1;
-    animation: slide-skills-bullet1 1.0673267327s linear 0.1s 1 normal forwards; }
+    animation: slide-skills-bullet1 0.7623762376s linear 0.1s 1 normal forwards; }
 @keyframes skills-opacity1 {
   from {
     color: rgba(0, 0, 0, 0); }
@@ -360,7 +364,7 @@ html {
     top: calc(50% - 3px); } }
   .block--skills__h3-2 {
     color: rgba(0, 0, 0, 0);
-    animation: skills-opacity2 0.4s ease 1.5s 1 normal forwards; }
+    animation: skills-opacity2 0.4s ease 1.1s 1 normal forwards; }
   .block--skills__h3-2::before {
     content: '';
     position: absolute;
@@ -369,7 +373,7 @@ html {
     border-top: 1px solid #000;
     top: calc(50% - 1px);
     left: -98px;
-    animation: slide-skills-hor 0.7s linear 0.6336633663s 1 normal forwards; }
+    animation: slide-skills-hor 0.5s linear 0.4811881188s 1 normal forwards; }
   .block--skills__h3-2::after {
     content: '';
     position: absolute;
@@ -380,7 +384,7 @@ html {
     left: -101px;
     background-color: #000;
     z-index: -1;
-    animation: slide-skills-bullet2 1.2336633663s linear 0.1s 1 normal forwards; }
+    animation: slide-skills-bullet2 0.8811881188s linear 0.1s 1 normal forwards; }
 @keyframes skills-opacity2 {
   from {
     color: rgba(0, 0, 0, 0); }
@@ -398,7 +402,7 @@ html {
     top: calc(50% - 3px); } }
   .block--skills__h3-3 {
     color: rgba(0, 0, 0, 0);
-    animation: skills-opacity3 0.4s ease 1.5s 1 normal forwards; }
+    animation: skills-opacity3 0.4s ease 1.1s 1 normal forwards; }
   .block--skills__h3-3::before {
     content: '';
     position: absolute;
@@ -407,7 +411,7 @@ html {
     border-top: 1px solid #000;
     top: calc(50% - 1px);
     left: -98px;
-    animation: slide-skills-hor 0.7s linear 0.8s 1 normal forwards; }
+    animation: slide-skills-hor 0.5s linear 0.6s 1 normal forwards; }
   .block--skills__h3-3::after {
     content: '';
     position: absolute;
@@ -418,7 +422,7 @@ html {
     left: -101px;
     background-color: #000;
     z-index: -1;
-    animation: slide-skills-bullet3 1.4s linear 0.1s 1 normal forwards; }
+    animation: slide-skills-bullet3 1s linear 0.1s 1 normal forwards; }
 @keyframes skills-opacity3 {
   from {
     color: rgba(0, 0, 0, 0); }
@@ -438,17 +442,99 @@ html {
   margin-bottom: 2rem; }
 
 @media only screen and (max-width: 1200px) {
+  .block--skills__tile {
+    width: 50%;
+    margin-top: 1rem; }
+
+  .block--skills {
+    padding: 2rem 2rem 0 2rem; } }
+@media only screen and (max-width: 920px) {
+  .block {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; }
+
+  .nav {
+    text-align: center;
+    padding: 0;
+    display: flex; }
+    .nav__button {
+      flex-grow: 1;
+      flex-basis: 0; }
+
   .block--intro {
-    height: 650px; } }
+    display: flex;
+    min-height: 480px;
+    height: calc(100vh - 50px); }
+    .block--intro__inner {
+      width: 100%;
+      height: auto;
+      bottom: 2rem; }
+    .block--intro__left {
+      width: 240px;
+      height: 280px;
+      margin-top: 0.75rem; }
+    .block--intro__center {
+      flex-grow: 1;
+      padding-top: 180px;
+      margin-right: 30px; }
+    .block--intro__center-inside {
+      height: 110px; }
+    .block--intro__center-h2-sect {
+      height: auto; }
+
+  .block__header {
+    text-align: center; }
+
+  .block--skills__text {
+    width: 176px; }
+
+  .block--skills__tile {
+    justify-content: center; } }
+@media only screen and (max-width: 767px) {
+  .block--skills__tile {
+    width: 100%; } }
+@media only screen and (max-width: 640px) {
+  .block--intro__inner {
+    flex-wrap: wrap;
+    bottom: 1rem; }
+
+  .block--intro__left {
+    margin: 0 auto;
+    margin-bottom: 1rem; }
+
+  .block--intro__center {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .block--intro__center-inside {
+      height: auto; }
+    .block--intro__center-h1 {
+      margin: 0.67em 0; }
+    .block--intro__center-h1::after, .block--intro__center-h2::after, .block--intro__center-h1::before, .block--intro__center-h2::before {
+      display: none; } }
+@media only screen and (max-width: 400px) {
+  .nav__button {
+    font-size: 0.75rem; }
+
+  .block--skills {
+    padding: 0.5rem; } }
 @keyframes slide-intro {
   0% {
-    transform: translateX(-180px);
+    transform: translateX(-200px);
     color: rgba(0, 0, 0, 0); }
   50% {
     color: rgba(0, 0, 0, 0); }
   100% {
     transform: translateX(0);
     color: black; } }
+@keyframes grow-intro {
+  0% {
+    width: 0;
+    transform: translateX(0px); }
+  100% {
+    width: 200px;
+    transform: translateX(-200px); } }
 @keyframes slide-skills-hor {
   0% {
     width: 0; }

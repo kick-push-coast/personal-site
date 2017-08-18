@@ -6,6 +6,7 @@ window.onload = function(){
    var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile'));
    setOffsets();
    checkAnimation();
+   calcVH();
    document.querySelector('.block--intro__center-inside').style.display = 'inline-block';
    var skills_icons = document.querySelectorAll('.block--skills__icon');
 };
@@ -17,7 +18,18 @@ function setOffsets() {
    }
 };
 
-window.onresize = setOffsets;
+function calcVH() {
+  if( window.innerWidth <= 767) {
+    var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
+    document.querySelector(".block--intro").setAttribute("style", "height:" + vH + "px;");
+  }
+}
+
+document.addEventListener('orientationchange', calcVH);
+
+window.onresize = function() {
+   setOffsets();
+};
 
 function checkAnimation() {
    var scroll = window.scrollY + window.innerHeight;
