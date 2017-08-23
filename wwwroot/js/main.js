@@ -1,9 +1,9 @@
-var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile'));
+var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile, .block--edu__tile'));
 var offsets = [];
 
 window.onload = function(){
    document.querySelector('html').style.display = 'block';
-   var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile'));
+   var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile, .block--edu__tile'));
    setOffsets();
    checkAnimation();
    calcVH();
@@ -42,6 +42,14 @@ function checkAnimation() {
          for(var j = 1; j < tiles[i].children[1].children.length; j++) {
             tiles[i].children[1].children[j].classList.add('block--skills__h3--show');
          }
+      }
+   }
+
+   if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      document.querySelector(".footer__link--contact").classList.add("footer__link--contact-animate");
+      var links = document.querySelectorAll(".footer__link--social");
+      for (var i = 0; i < links.length; i++) {
+         links[i].classList.add("footer__link--social-animate");
       }
    }
 };
