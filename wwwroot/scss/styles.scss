@@ -24,7 +24,34 @@ html {
    height: 50px;
    padding: 0 2rem;
    text-align: right;
+   position: relative;
 
+   &__logo {
+      position: absolute;
+      padding: 1rem;
+      top: 0;
+      left: 2rem;
+      height:190px;
+      width: 190px;
+      z-index: 1;
+
+      &-img {
+         width: 100%;
+         height: 100%;
+      }
+      &::after {
+         content: '';
+         width: 190px;
+         height: 140px;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         background-color: #fff;
+         z-index: -1;
+         border-bottom: 1px solid #e0e0e0;
+         border-right: 1px solid #e0e0e0;
+      }
+   }
    &__button {
       display: inline-block;
       text-align: center;
@@ -352,6 +379,83 @@ html {
    }
 }
 
+.block--work {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   &__tile {
+      width: calc(50% - 10px);
+      margin-bottom: 1rem;
+      display: flex;
+      padding: 1rem;
+      background-color: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
+
+      &-left {
+         text-align: center;
+         width: 300px;
+         min-width: 300px;
+      }
+      &-right {
+         flex-grow: 1;
+         padding-top: 50px;
+         display: flex;
+         flex-direction: column;
+      }
+   }
+   &__img {
+      height: 250px;
+      width: auto;
+      margin: 0 auto 100px auto;
+   }
+   &__title {
+      margin: 0;
+      height: 30px;
+      font-size: 1.3rem;
+   }
+   &__type {
+      margin: 0 0 0 2px;
+      height: 20px;
+      font-size: 0.9rem;
+   }
+   &__links {
+      height: 150px;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-span {
+         height: 20px;
+
+         a {
+            color: #000;
+         }
+      }
+   }
+   &__tech {
+      min-height: 100px;
+      margin: 0;
+      padding: 0;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      list-style-type: none;
+
+      &-items {
+         text-align: center;
+         font-size: 0.8rem;
+         width: calc(100% / 3);
+      }
+   }
+
+}
+
 .block--divided {
    margin-bottom: 2rem;
 }
@@ -392,7 +496,7 @@ html {
          right: 75px;
          border-bottom: 1px solid #000;
          border-right: 1px solid #000;
-         animation: contact-line #{209/229*1.1}s linear .1s 1 normal forwards;
+         animation: contact-line #{209/229*1}s linear .1s 1 normal forwards;
       }
       &-animate::before, &-animate::after {
          display: block !important;
@@ -418,7 +522,7 @@ html {
       @each $color in $intro-colors {
          $i: index($intro-colors, $color);
          &-animate > span:nth-child(#{$i}) {
-            animation: letter#{$i} .4s linear #{($i*75+1125)}ms normal forwards;
+            animation: letter#{$i} .4s linear #{($i*75+1025)}ms normal forwards;
          }
          @keyframes letter#{$i} {
             0% {
@@ -451,7 +555,7 @@ html {
    &__link--social svg {
       fill: rgba(0,0,0,0);
       transition: fill 1s ease;
-      transition-delay: 1.2s;
+      transition-delay: 1.1s;
    }
    &__link--social-animate svg {
       fill: rgba(0,0,0,1);
@@ -477,7 +581,7 @@ html {
             top: -43px;
             left: #{(($i)-1)*75-3}px;
             background-color: #000;
-            animation: social-dot#{$i} #{((($i)-2)*75+79)/229*1.1}s linear .1s 1 normal forwards;
+            animation: social-dot#{$i} #{((($i)-2)*75+79)/229*1}s linear .1s 1 normal forwards;
          }
          &::after {
             content: '';
@@ -488,7 +592,7 @@ html {
             right: 37px;
             top: -20px;
             border-left: 1px solid #000;
-            animation: social-line#{$i} #{21/229*1.1}s linear #{((($i)-2)*75+59)/229*1.1+.1}s 1 normal forwards;
+            animation: social-line#{$i} #{21/229*1}s linear #{((($i)-2)*75+59)/229*1+.1}s 1 normal forwards;
          }
       }
       @keyframes social-dot#{$i} {
@@ -535,7 +639,7 @@ html {
          top: -43px;
          left: -3px;
          background-color: #000;
-         animation: social-dot1 #{79.5/229*1.1}s linear .1s 1 normal forwards;
+         animation: social-dot1 #{79.5/229*1}s linear .1s 1 normal forwards;
       }
       &::after {
          content: '';
@@ -547,7 +651,7 @@ html {
          top: -21px;
          border-right: 1px solid #000;
          border-top: 1px solid #000;
-         animation: social-line1 #{(58.5/229)*1.1}s linear #{(21/229)*1.1+.1}s 1 normal forwards;
+         animation: social-line1 #{(58.5/229)*1}s linear #{(21/229)*1+.1}s 1 normal forwards;
       }
       @keyframes social-dot1 {
          0% {

@@ -16,7 +16,30 @@ html {
   width: 100%;
   height: 50px;
   padding: 0 2rem;
-  text-align: right; }
+  text-align: right;
+  position: relative; }
+  .nav__logo {
+    position: absolute;
+    padding: 1rem;
+    top: 0;
+    left: 2rem;
+    height: 190px;
+    width: 190px;
+    z-index: 1; }
+    .nav__logo-img {
+      width: 100%;
+      height: 100%; }
+    .nav__logo::after {
+      content: '';
+      width: 190px;
+      height: 140px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: -1;
+      border-bottom: 1px solid #e0e0e0;
+      border-right: 1px solid #e0e0e0; }
   .nav__button {
     display: inline-block;
     text-align: center;
@@ -494,6 +517,65 @@ html {
     margin: 0;
     font-size: 1rem; }
 
+.block--work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .block--work__tile {
+    width: calc(50% - 10px);
+    margin-bottom: 1rem;
+    display: flex;
+    padding: 1rem;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px; }
+    .block--work__tile-left {
+      text-align: center;
+      width: 300px;
+      min-width: 300px; }
+    .block--work__tile-right {
+      flex-grow: 1;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column; }
+  .block--work__img {
+    height: 250px;
+    width: auto;
+    margin: 0 auto 100px auto; }
+  .block--work__title {
+    margin: 0;
+    height: 30px;
+    font-size: 1.3rem; }
+  .block--work__type {
+    margin: 0 0 0 2px;
+    height: 20px;
+    font-size: 0.9rem; }
+  .block--work__links {
+    height: 150px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .block--work__links-span {
+      height: 20px; }
+      .block--work__links-span a {
+        color: #000; }
+  .block--work__tech {
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none; }
+    .block--work__tech-items {
+      text-align: center;
+      font-size: 0.8rem;
+      width: calc(100% / 3); }
+
 .block--divided {
   margin-bottom: 2rem; }
 
@@ -528,7 +610,7 @@ html {
       right: 75px;
       border-bottom: 1px solid #000;
       border-right: 1px solid #000;
-      animation: contact-line 1.003930131s linear 0.1s 1 normal forwards; }
+      animation: contact-line 0.9126637555s linear 0.1s 1 normal forwards; }
     .footer__link--contact-animate::before, .footer__link--contact-animate::after {
       display: block !important; }
 @keyframes contact-line {
@@ -545,7 +627,7 @@ html {
     width: 188px;
     bottom: -21px; } }
     .footer__link--contact-animate > span:nth-child(1) {
-      animation: letter1 0.4s linear 1200ms normal forwards; }
+      animation: letter1 0.4s linear 1100ms normal forwards; }
 @keyframes letter1 {
   0% {
     color: black; }
@@ -556,7 +638,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(2) {
-      animation: letter2 0.4s linear 1275ms normal forwards; }
+      animation: letter2 0.4s linear 1175ms normal forwards; }
 @keyframes letter2 {
   0% {
     color: black; }
@@ -567,7 +649,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(3) {
-      animation: letter3 0.4s linear 1350ms normal forwards; }
+      animation: letter3 0.4s linear 1250ms normal forwards; }
 @keyframes letter3 {
   0% {
     color: black; }
@@ -578,7 +660,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(4) {
-      animation: letter4 0.4s linear 1425ms normal forwards; }
+      animation: letter4 0.4s linear 1325ms normal forwards; }
 @keyframes letter4 {
   0% {
     color: black; }
@@ -589,7 +671,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(5) {
-      animation: letter5 0.4s linear 1500ms normal forwards; }
+      animation: letter5 0.4s linear 1400ms normal forwards; }
 @keyframes letter5 {
   0% {
     color: black; }
@@ -600,7 +682,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(6) {
-      animation: letter6 0.4s linear 1575ms normal forwards; }
+      animation: letter6 0.4s linear 1475ms normal forwards; }
 @keyframes letter6 {
   0% {
     color: black; }
@@ -611,7 +693,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(7) {
-      animation: letter7 0.4s linear 1650ms normal forwards; }
+      animation: letter7 0.4s linear 1550ms normal forwards; }
 @keyframes letter7 {
   0% {
     color: black; }
@@ -622,7 +704,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(8) {
-      animation: letter8 0.4s linear 1725ms normal forwards; }
+      animation: letter8 0.4s linear 1625ms normal forwards; }
 @keyframes letter8 {
   0% {
     color: black; }
@@ -633,7 +715,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(9) {
-      animation: letter9 0.4s linear 1800ms normal forwards; }
+      animation: letter9 0.4s linear 1700ms normal forwards; }
 @keyframes letter9 {
   0% {
     color: black; }
@@ -644,7 +726,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(10) {
-      animation: letter10 0.4s linear 1875ms normal forwards; }
+      animation: letter10 0.4s linear 1775ms normal forwards; }
 @keyframes letter10 {
   0% {
     color: black; }
@@ -655,7 +737,7 @@ html {
   100% {
     color: black; } }
     .footer__link--contact-animate > span:nth-child(11) {
-      animation: letter11 0.4s linear 1950ms normal forwards; }
+      animation: letter11 0.4s linear 1850ms normal forwards; }
 @keyframes letter11 {
   0% {
     color: black; }
@@ -676,7 +758,7 @@ html {
   .footer__link--social svg {
     fill: rgba(0, 0, 0, 0);
     transition: fill 1s ease;
-    transition-delay: 1.2s; }
+    transition-delay: 1.1s; }
   .footer__link--social-animate svg {
     fill: black; }
   .footer__link--social-animate::after, .footer__link--social-animate::before {
@@ -696,7 +778,7 @@ html {
       top: -43px;
       left: 72px;
       background-color: #000;
-      animation: social-dot2 0.3794759825s linear 0.1s 1 normal forwards; }
+      animation: social-dot2 0.3449781659s linear 0.1s 1 normal forwards; }
     .footer__link--social-2::after {
       content: '';
       display: none;
@@ -706,7 +788,7 @@ html {
       right: 37px;
       top: -20px;
       border-left: 1px solid #000;
-      animation: social-line2 0.1008733624s linear 0.3834061135s 1 normal forwards; }
+      animation: social-line2 0.0917030568s linear 0.3576419214s 1 normal forwards; }
 @keyframes social-dot2 {
   0% {
     top: -43px;
@@ -740,7 +822,7 @@ html {
       top: -43px;
       left: 147px;
       background-color: #000;
-      animation: social-dot3 0.7397379913s linear 0.1s 1 normal forwards; }
+      animation: social-dot3 0.672489083s linear 0.1s 1 normal forwards; }
     .footer__link--social-3::after {
       content: '';
       display: none;
@@ -750,7 +832,7 @@ html {
       right: 37px;
       top: -20px;
       border-left: 1px solid #000;
-      animation: social-line3 0.1008733624s linear 0.7436681223s 1 normal forwards; }
+      animation: social-line3 0.0917030568s linear 0.6851528384s 1 normal forwards; }
 @keyframes social-dot3 {
   0% {
     top: -43px;
@@ -784,7 +866,7 @@ html {
       top: -43px;
       left: 222px;
       background-color: #000;
-      animation: social-dot4 1.1s linear 0.1s 1 normal forwards; }
+      animation: social-dot4 1s linear 0.1s 1 normal forwards; }
     .footer__link--social-4::after {
       content: '';
       display: none;
@@ -794,7 +876,7 @@ html {
       right: 37px;
       top: -20px;
       border-left: 1px solid #000;
-      animation: social-line4 0.1008733624s linear 1.103930131s 1 normal forwards; }
+      animation: social-line4 0.0917030568s linear 1.0126637555s 1 normal forwards; }
 @keyframes social-dot4 {
   0% {
     top: -43px;
@@ -828,7 +910,7 @@ html {
       top: -43px;
       left: -3px;
       background-color: #000;
-      animation: social-dot1 0.3818777293s linear 0.1s 1 normal forwards; }
+      animation: social-dot1 0.3471615721s linear 0.1s 1 normal forwards; }
     .footer__link--social-1::after {
       content: '';
       display: none;
@@ -839,7 +921,7 @@ html {
       top: -21px;
       border-right: 1px solid #000;
       border-top: 1px solid #000;
-      animation: social-line1 0.2810043668s linear 0.2008733624s 1 normal forwards; }
+      animation: social-line1 0.2554585153s linear 0.1917030568s 1 normal forwards; }
 @keyframes social-dot1 {
   0% {
     top: -43px;
