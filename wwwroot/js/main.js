@@ -4,12 +4,27 @@ var offsets = [];
 window.onload = function(){
    document.querySelector('html').style.display = 'block';
    var tiles = Array.prototype.slice.call(document.querySelectorAll('.block--skills__tile, .block--edu__tile'));
+   showWork();
    setOffsets();
    checkAnimation();
    calcVH();
-   document.querySelector('.block--intro__center-inside').style.display = 'inline-block';
+   var introCenter = document.querySelector('.block--intro__center-inside');
+   if (introCenter) {
+      introCenter.style.display = 'inline-block';
+   }
    var skills_icons = document.querySelectorAll('.block--skills__icon');
 };
+
+function showWork() {
+   var titles = document.querySelectorAll('.block--work__title');
+   var links = document.querySelectorAll('.block--work__links');
+   var tech = document.querySelectorAll('.block--work__tech');
+   for (var i = 0; i < titles.length; i++) {
+      titles[i].classList.add('block--work-animate');
+      links[i].classList.add('block--work-animate');
+      tech[i].classList.add('block--work-animate');
+   }
+}
 
 function setOffsets() {
    for (var i = 0; i < tiles.length; i++) {
@@ -32,15 +47,21 @@ window.onresize = function() {
 };
 
 function checkAnimation() {
-   var scroll = window.scrollY + window.innerHeight;
+   var scroll = window.pageYOffset + window.innerHeight;
 
    for (var i = 0; i < offsets.length; i++) {
       if (scroll >= offsets[i]) {
-         tiles[i].children[1].children[0].classList.add('block--skills__h2--show');
-         tiles[i].children[0].classList.add('block--skills__icon--animate');
+         if (tiles[i].children[1]) {
+            tiles[i].children[1].children[0].classList.add('block--skills__h2--show');
+         }
+         if (tiles[i].children[0].classList) {
+            tiles[i].children[0].classList.add('block--skills__icon--animate');
+         }
 
          for(var j = 1; j < tiles[i].children[1].children.length; j++) {
-            tiles[i].children[1].children[j].classList.add('block--skills__h3--show');
+            if (tiles[i].children[1]) {
+               tiles[i].children[1].children[j].classList.add('block--skills__h3--show');
+            }
          }
       }
    }
