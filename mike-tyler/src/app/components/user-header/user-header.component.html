@@ -1,0 +1,19 @@
+<header class='p-2 br-6 bs-light bg-gray-light block--intro'>
+    <div class="block--intro__inner">
+       <img class='block--intro__left' [attr.src]='user.avatar'/>
+
+       <div class='block--intro__center'>
+          <div class='block--intro__center-inside'>
+             <h1 class='block--intro__center-h1'>
+                <span *ngFor="let char of user.name | splitString" [innerHtml]="char">
+                </span>
+             </h1>
+             <div class='block--intro__center-h2-sect'>
+                <h2 class='block--intro__center-h2'>{{ user.title }}</h2>
+                <h2 class='block--intro__center-h2'>{{ user.city }}</h2>
+             </div>
+          </div>
+       </div>
+    </div>
+
+ </header>

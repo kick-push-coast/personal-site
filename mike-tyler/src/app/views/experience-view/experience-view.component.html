@@ -1,0 +1,5 @@
+<div class="mb-8">
+    <app-user-header [user]="user"></app-user-header>
+</div>
+<app-user-experience (technologyClicked)="openWiki($event)" *ngFor="let experience of user.experience" [experience]="experience"></app-user-experience>
+<app-user-education *ngFor="let education of user.education" [education]="education"></app-user-education>

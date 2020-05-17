@@ -1,0 +1,78 @@
+$spacer: .8rem;
+
+$space-1: $spacer*1;
+$space-2: $spacer*2;
+$space-3: $spacer*3;
+$space-4: $spacer*4;
+$space-5: $spacer*5;
+$space-6: $spacer*6;
+$space-7: $spacer*7;
+$space-8: $spacer*8;
+
+$spacers: $space-1 $space-2 $space-3 $space-4 $space-5 $space-6 $space-7 $space-8;
+
+
+@each $s in $spacers {
+    $i: index($spacers, $s);
+
+    // Margin
+    .m-#{$i} {
+        margin: $s;
+    }
+    .mb-#{$i} {
+        margin-bottom: $s;
+    }
+    .mt-#{$i} {
+        margin-top: $s;
+    }
+    .ml-#{$i} {
+        margin-left: $s;
+    }
+    .mr-#{$i} {
+        margin-right: $s;
+    }
+    .mx-#{$i} {
+        margin-right: $s;
+        margin-left: $s;
+    }
+    .my-#{$i} {
+        margin-top: $s;
+        margin-bottom: $s;
+    }
+
+    // Padding
+    .p-#{$i} {
+        padding: $s;
+    }
+    .pb-#{$i} {
+        padding-bottom: $s;
+    }
+    .pt-#{$i} {
+        padding-top: $s;
+    }
+    .pl-#{$i} {
+        padding-left: $s;
+    }
+    .pr-#{$i} {
+        padding-right: $s;
+    }
+    .px-#{$i} {
+        padding-right: $s;
+        padding-left: $s;
+    }
+    .py-#{$i} {
+        padding-top: $s;
+        padding-bottom: $s;
+    }
+}
+
+// Width
+
+.w-100p {
+    width: 100%;
+}
+
+.w-33p {
+    min-width: calc(100% / 3);
+    width: calc(100% / 3);
+}

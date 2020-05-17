@@ -1,0 +1,8 @@
+<h2>
+    {{ experience.years }} years
+</h2>
+<div class="d-flex flex-wrap">
+    <div *ngFor="let tech of experience.technologies" class="flex-basis-0 w-33p p-4 text-center bg-gray-light bs-light br-6" (click)="techClicked(tech.name)">
+        {{ tech.name }}
+    </div>
+</div>

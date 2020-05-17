@@ -1,0 +1,43 @@
+@import "./spacing";
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-basis-0 {
+    flex-basis: 0;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 $space-3;
+    @media only screen and (max-width: 480px) {
+        padding: 0 $space-1;
+    }
+ }
