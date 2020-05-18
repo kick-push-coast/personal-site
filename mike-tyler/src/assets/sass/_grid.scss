@@ -47,3 +47,17 @@
         padding: 0 $space-1;
     }
  }
+
+ .responsive-col {
+     flex-basis: 0;
+     min-width: calc(100% / 3);
+     width: calc(100% / 3);
+     @media screen and (max-width: 1200px) {
+         min-width: calc(100% / 2);
+         width: calc(100% / 2);
+     }
+     @media screen and (max-width: 750px) {
+         min-width: 100%;
+         width: 100%;
+     }
+ }

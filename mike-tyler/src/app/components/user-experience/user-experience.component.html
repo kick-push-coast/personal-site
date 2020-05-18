@@ -9,11 +9,11 @@
                 [attr.href]="tech.externalUrl"
                 target="_blank"
                 class="panel-actionable p-6 text-center bg-gray-light bs-light br-6 
-                        d-flex justify-content-center align-items-center h-100p position-relative">
+                        d-flex justify-content-center align-items-center h-100 position-relative">
 
                 <img *ngIf="tech.image" [attr.src]="tech.image" class="tech-img mr-6"/>
                 <label [ngClass]="{'text-center' : !tech.image}" class="tech-label text-md cursor-pointer">{{ tech.name }}</label>
-                <i class="hover-icon fa fa-external-link-square color-gray-dark position-absolute top-0 right-0 text-md m-2" aria-hidden="true"> </i>
+                <i class="hover-icon fa fa-external-link-square color-gray-darkest  position-absolute top-0 right-0 text-md m-2" aria-hidden="true"> </i>
 
             </a>
             <div 
@@ -23,11 +23,11 @@
                 (click)="techClicked(tech)"
                 [ngClass]="{'panel-actionable' : tech.hasWiki }"
                 class="p-6 text-center bg-gray-light bs-light br-6 
-                        d-flex justify-content-center align-items-center h-100p position-relative">
+                        d-flex justify-content-center align-items-center h-100 position-relative">
 
                 <img *ngIf="tech.image" [attr.alt]="tech.name" [attr.src]="tech.image" class="tech-img mr-6"/>
                 <label [ngClass]="{'text-center' : !tech.image, 'cursor-pointer' : tech.hasWiki}" class="tech-label text-md">{{ tech.name }}</label>
-                <i class="hover-icon fa fa-info-circle color-gray-dark position-absolute top-0 right-0 text-md m-2" aria-hidden="true"> </i>
+                <i class="hover-icon fa fa-info-circle color-gray-darkest  position-absolute top-0 right-0 text-md m-2" aria-hidden="true"> </i>
 
             </div>
         </div>
