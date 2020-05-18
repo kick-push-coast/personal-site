@@ -9,7 +9,7 @@ import { map, catchError } from 'rxjs/operators';
 export class HttpRepositoryService {
 
     constructor(
-        private httpService: HttpClient
+        private httpClient: HttpClient
     ) { }
 
     public get(url: string, params?, type: string = 'json'): Observable<any> {
@@ -23,12 +23,6 @@ export class HttpRepositoryService {
             options.params = params;
         }
 
-        return this.httpService.get<any>(url, options)
-            .pipe(
-                map((response: any) => {
-                    return response;
-                }), catchError(e => {
-                    return throwError(e);
-                }));
+        return this.httpClient.get<any>(url, options);
     }
 }

@@ -41,14 +41,7 @@ export class CurrentWikiStoreService {
         if (!this.currentWiki || (page !== this.currentWiki.tech)) {
             this.wikiOpen = true;
             this.wikiLoading = true;
-            const url = this.buildUrl(page);
-            this.httpRepository.get(url).subscribe(response => {
-                if (response && response.query && response.query.pages[this.currentPageId]) {
-                    this.currentWiki = this.buildWikiObject(response, page);
-                    this.currentWikiSource.next(this.currentWiki);
-                    this.wikiLoading = false;
-                }
-            });
+            this.requestWiki(page);
         } else {
             this.wikiOpen = true;
         }
@@ -56,6 +49,17 @@ export class CurrentWikiStoreService {
 
     closeWiki() {
         this.wikiOpen = false;
+    }
+
+    private requestWiki(page: Technologies) {
+        const url = this.buildUrl(page);
+        this.httpRepository.get(url).subscribe(response => {
+            if (response && response.query && response.query.pages[this.currentPageId]) {
+                this.currentWiki = this.buildWikiObject(response, page);
+                this.currentWikiSource.next(this.currentWiki);
+                this.wikiLoading = false;
+            }
+        });
     }
 
     private buildUrl(page: Technologies) {
