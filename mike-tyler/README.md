@@ -46,6 +46,6 @@ CSS is organized into global utilities that represent a general style rule and n
 As mentioned, I'm still making improvements and plan to address the following missing pieces:
 
 * Unit testing
-* Refactorying css from old site
+* Refactoring css from old site
 * Creating Angular component/service for dot game logic (currently, this is hosted in an external JS file)
 * Accessibility improvements
