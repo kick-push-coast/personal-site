@@ -12,6 +12,9 @@ import { UserExperienceComponent } from './components/user-experience/user-exper
 import { UserEducationComponent } from './components/user-education/user-education.component';
 import { SplitStringPipe } from './pipes/split-string.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { WikiPanelComponent } from './components/wiki-panel/wiki-panel.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DotGameComponent } from './components/dot-game/dot-game.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { HttpClientModule } from '@angular/common/http';
     UserHeaderComponent,
     UserExperienceComponent,
     UserEducationComponent,
-    SplitStringPipe
+    SplitStringPipe,
+    WikiPanelComponent,
+    DotGameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

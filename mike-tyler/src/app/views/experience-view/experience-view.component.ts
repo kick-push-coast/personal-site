@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CurrentUserStoreService } from 'src/app/stores/current-user/current-user-store.service';
-import { UserModel } from 'src/app/stores/current-user/model/user-model';
+import { UserModel, TechnologyModel } from 'src/app/stores/current-user/model/user-model';
 import { Subscription } from 'rxjs';
 import { CurrentWikiStoreService } from 'src/app/stores/current-wiki/current-wiki-store.service';
 import { Technologies } from 'src/app/enums/technologies';
@@ -39,11 +39,10 @@ export class ExperienceViewComponent implements OnInit, OnDestroy {
         });
     }
 
-    openWiki(tech: Technologies) {
-        console.log(tech);
-        this.currentWikiStore.getWikiExtract(tech).subscribe(response => {
-            console.log(response);
-        });
+    openWiki(tech: TechnologyModel) {
+        if (tech.hasWiki) {
+            this.currentWikiStore.openWiki(tech.name);
+        }
     }
 
 }

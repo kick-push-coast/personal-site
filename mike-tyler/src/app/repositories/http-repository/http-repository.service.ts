@@ -19,7 +19,7 @@ export class HttpRepositoryService {
             responseType: type
         };
 
-        if (params !== undefined && params !== null) {
+        if (params) {
             options.params = params;
         }
 

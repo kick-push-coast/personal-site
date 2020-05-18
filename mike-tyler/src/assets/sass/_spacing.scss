@@ -8,8 +8,12 @@ $space-5: $spacer*5;
 $space-6: $spacer*6;
 $space-7: $spacer*7;
 $space-8: $spacer*8;
+$space-9: $spacer*9;
+$space-10: $spacer*10;
+$space-11: $spacer*11;
+$space-12: $spacer*20;
 
-$spacers: $space-1 $space-2 $space-3 $space-4 $space-5 $space-6 $space-7 $space-8;
+$spacers: $space-1 $space-2 $space-3 $space-4 $space-5 $space-6 $space-7 $space-8 $space-9 $space-10 $space-11 $space-12;
 
 
 @each $s in $spacers {
@@ -18,6 +22,9 @@ $spacers: $space-1 $space-2 $space-3 $space-4 $space-5 $space-6 $space-7 $space-
     // Margin
     .m-#{$i} {
         margin: $s;
+    }
+    .m-#{$i}-neg {
+        margin: -$s;
     }
     .mb-#{$i} {
         margin-bottom: $s;
@@ -68,11 +75,34 @@ $spacers: $space-1 $space-2 $space-3 $space-4 $space-5 $space-6 $space-7 $space-
 
 // Width
 
-.w-100p {
-    width: 100%;
+.w-100 {
+    width: 100% !important;
 }
 
-.w-33p {
+.h-100 {
+    height: 100% !important;
+}
+
+.w-auto-md {
+    @media screen and (min-width: 751px) {
+        width: auto !important;
+    }
+}
+
+.h-100p {
+    height: 100%;
+}
+
+.responsive-col {
+    flex-basis: 0;
     min-width: calc(100% / 3);
     width: calc(100% / 3);
+    @media screen and (max-width: 1200px) {
+        min-width: calc(100% / 2);
+        width: calc(100% / 2);
+    }
+    @media screen and (max-width: 750px) {
+        min-width: 100%;
+        width: 100%;
+    }
 }

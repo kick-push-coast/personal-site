@@ -11,20 +11,21 @@ export interface UserModel {
 }
 
 export interface ExperienceModel {
-    years: string;
+    level: string;
     technologies: TechnologyModel[];
 }
 
 export interface TechnologyModel {
     name: Technologies;
-    thumbnail?: string;
-    sublist?: string[];
+    image?: string;
     hasWiki?: boolean;
+    externalUrl?: string;
 }
 
 export interface EducationModel {
     school: string;
     city: string;
     degree: string;
+    image?: string;
     hasWiki?: boolean;
 }

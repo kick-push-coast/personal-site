@@ -31,7 +31,7 @@ $intro-colors: #C22326 #fe6d2a #fda432 #017886 #801638 #9cc83b #fbe839 #f13f4f #
 
 .block--intro {
    min-height: 650px;
-   height: calc(100vh - 88px);
+   height: calc(100vh - 64px);
    position: relative;
 
    &-work {
@@ -312,7 +312,7 @@ $intro-colors: #C22326 #fe6d2a #fda432 #017886 #801638 #9cc83b #fbe839 #f13f4f #
       }
    }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 750px) {
    .block__header {
       font-size: 1.5rem;
    }
@@ -322,6 +322,7 @@ $intro-colors: #C22326 #fe6d2a #fda432 #017886 #801638 #9cc83b #fbe839 #f13f4f #
    .block--intro__inner {
       flex-wrap: wrap;
       bottom: 2rem;
+      width: 100%;
    }
    .block--intro__left {
       width: 240px;
