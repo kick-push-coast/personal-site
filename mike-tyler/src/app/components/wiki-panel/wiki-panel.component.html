@@ -4,7 +4,7 @@
         <section *ngIf="!currentWikiStore.wikiLoading && currentWikiStore.currentWiki">
             <h2 class="mb-3">{{ currentWikiStore.currentWiki.title }}</h2>
             <p class="text-sm lh-md mb-3">{{ currentWikiStore.currentWiki.summary }}</p>
-            <footer class="text-xs">Source: <a [attr.href]="currentWikiStore.currentWiki.url" target="_blank">Wikipedia</a></footer>
+            <footer class="text-xs">Source: <a [attr.href]="currentWikiStore.currentWiki.url" target="_blank" class="wiki-link">Wikipedia</a></footer>
             
         </section>
     </div>
