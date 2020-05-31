@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { WikiPanelComponent } from './components/wiki-panel/wiki-panel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DotGameComponent } from './components/dot-game/dot-game.component';
+import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
+import { PersonalLayoutComponent } from './layout/personal-layout/personal-layout.component';
+import { SignupViewComponent } from './views/signup-view/signup-view.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { DotGameComponent } from './components/dot-game/dot-game.component';
     UserEducationComponent,
     SplitStringPipe,
     WikiPanelComponent,
-    DotGameComponent
+    DotGameComponent,
+    PublicLayoutComponent,
+    PersonalLayoutComponent,
+    SignupViewComponent
   ],
   imports: [
     BrowserModule,
