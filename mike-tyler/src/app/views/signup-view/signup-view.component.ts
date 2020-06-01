@@ -34,6 +34,7 @@ enum signupSteps {
 export class SignupViewComponent implements OnInit {
 
     formInputs: InputClass<string>[] = [];
+    loading: boolean;
     signupStep = signupSteps.form;
     signupUser: SignupUser;
 
@@ -68,13 +69,17 @@ export class SignupViewComponent implements OnInit {
     }
 
     submit(model: FormGroup) {
+        this.loading = true;
         this.signupUser = {
             firstName: model.value.firstName,
             email: model.value.emailAddress,
             password: model.value.password
         };
         // Send off user payload to server and await success
-        this.signupStep = signupSteps.success;
+        setTimeout(() => {
+            this.signupStep = signupSteps.success;
+            this.loading = false;
+        }, 3000);
     }
 
 }

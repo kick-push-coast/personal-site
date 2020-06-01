@@ -79,29 +79,6 @@
     text-transform: capitalize;
 }
 
-// TODO: Componentize
-.btn-default {
-    background: linear-gradient(138deg,#ff5502,#ff017f,#ff010d);
-    background-size: 300% 100%;
-    outline: none;
-    border: none;
-    border-radius: 6px;
-    padding: 1.2rem 2.4rem;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: bold;
-    &:hover {
-        cursor: pointer;
-        background-position: 100% 0;
-    }
-    &:disabled {
-        opacity: .6;
-    }
-    &:disabled:hover {
-        cursor: initial;
-        background-position: inherit !important;
-    }
-    &:focus {
-        box-shadow: 0 0 0 3px #016fc8, 0 0 0 6px rgba(74,144,226,.2);
-    }
+.invisible {
+    visibility: hidden;
 }

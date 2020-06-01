@@ -3,6 +3,6 @@
         <app-form-input [inputModel]="input" [form]="formModel"></app-form-input>
     </div>
     <div class="text-right">
-        <button type="submit" class="btn-default" [disabled]="!formModel.valid">Sign Up</button>
+        <app-default-button [type]="submit" [disabled]="!formModel.valid" [loading]="loading">Sign Up</app-default-button>
     </div>
 </form>

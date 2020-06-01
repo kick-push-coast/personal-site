@@ -10,6 +10,7 @@ import { InputClass, InputType } from '../input-types/input-base';
 export class PublicFormComponent implements OnInit {
 
     @Input() formInputs: InputClass<string>[];
+    @Input() loading: boolean;
     @Output() formSubmit: EventEmitter<FormGroup> =  new EventEmitter<FormGroup>();
 
     formModel: FormGroup;

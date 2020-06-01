@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-default-button',
-  templateUrl: './default-button.component.html',
-  styleUrls: ['./default-button.component.scss']
+    selector: 'app-default-button',
+    templateUrl: './default-button.component.html',
+    styleUrls: ['./default-button.component.scss']
 })
 export class DefaultButtonComponent implements OnInit {
 
-  constructor() { }
+    @Input() type: string;
+    @Input() disabled: boolean;
+    @Input() loading: boolean;
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
 
 }
