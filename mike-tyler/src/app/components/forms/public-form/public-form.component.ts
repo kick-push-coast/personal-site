@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { InputClass } from '../input-types/input-base';
+import { InputClass, InputType } from '../input-types/input-base';
 
 @Component({
     selector: 'app-public-form',
@@ -30,9 +30,17 @@ export class PublicFormComponent implements OnInit {
         const group: any = {};
 
         inputs.forEach(input => {
-        group[input.key] = input.required ?
-                                new FormControl(input.value || '', Validators.required) :
-                                new FormControl(input.value || '');
+            const validators = [];
+            if (input.required) {
+                validators.push(Validators.required);
+            }
+            if (input.type === InputType.email) {
+                validators.push(Validators.email);
+            }
+            if (input.type === InputType.password) {
+                validators.push(Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{7,}'));
+            }
+            group[input.key] = new FormControl(input.value || '', validators);
         });
         return new FormGroup(group);
     }

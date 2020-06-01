@@ -1,6 +1,8 @@
-<div [formGroup]="form" class="pb-3 position-relative">
+<div [formGroup]="form" class="mb-3 position-relative">
     <label class="text-sm d-block mb-1 text-bold text-capitalize" [attr.for]="inputModel.key">{{ inputModel.label }}</label>
-    <input class="input-default" [formControlName]="inputModel.key" [id]="inputModel.key" [type]="inputModel.type">
-    <!-- TODO: Add password validation -->
-    <div class="input-error text-xs" *ngIf="isTouched && !isValid">{{ inputModel.label }} is required</div>
+    <input class="input-default" (focus)="inputFocused = true" (blur)="inputFocused = false" [formControlName]="inputModel.key" [id]="inputModel.key" [type]="inputModel.type">
+    <div class="input-error text-xs" *ngIf="isTouched && !isValid">
+        {{ inputModel.label }} {{ errors.required ? 'is required' : 'is invalid' }} 
+    </div>
+    <app-validate-tooltip *ngIf="showTooltip"></app-validate-tooltip>
 </div>

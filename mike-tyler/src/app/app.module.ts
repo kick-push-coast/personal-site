@@ -22,6 +22,7 @@ import { PublicFormComponent } from './components/forms/public-form/public-form.
 import { FormInputComponent } from './components/forms/form-input/form-input.component';
 import { PromptTextComponent } from './components/prompt-text/prompt-text.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ValidateTooltipComponent } from './components/validate-tooltip/validate-tooltip.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupViewComponent,
     PublicFormComponent,
     FormInputComponent,
-    PromptTextComponent
+    PromptTextComponent,
+    ValidateTooltipComponent
   ],
   imports: [
     BrowserModule,

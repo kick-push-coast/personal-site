@@ -14,7 +14,10 @@ const routes: Routes = [
     children: [
       {
           path: '',
-          component: ExperienceViewComponent
+          component: ExperienceViewComponent,
+          data: {
+              title: 'UX/UI Engineer | Minneapolis'
+          }
       }
     ]
   },
@@ -26,7 +29,10 @@ const routes: Routes = [
             path: '',
             component: SignupViewComponent
         }
-      ]
+      ],
+      data: {
+          title: 'Sign Up'
+      }
   }
 ];
 
