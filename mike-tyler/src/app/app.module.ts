@@ -15,6 +15,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { WikiPanelComponent } from './components/wiki-panel/wiki-panel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DotGameComponent } from './components/dot-game/dot-game.component';
+import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
+import { PersonalLayoutComponent } from './layout/personal-layout/personal-layout.component';
+import { SignupViewComponent } from './views/signup-view/signup-view.component';
+import { PublicFormComponent } from './components/forms/public-form/public-form.component';
+import { FormInputComponent } from './components/forms/form-input/form-input.component';
+import { PromptTextComponent } from './components/prompt-text/prompt-text.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ValidateTooltipComponent } from './components/validate-tooltip/validate-tooltip.component';
+import { DefaultButtonComponent } from './components/buttons/default-button/default-button.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +37,22 @@ import { DotGameComponent } from './components/dot-game/dot-game.component';
     UserEducationComponent,
     SplitStringPipe,
     WikiPanelComponent,
-    DotGameComponent
+    DotGameComponent,
+    PublicLayoutComponent,
+    PersonalLayoutComponent,
+    SignupViewComponent,
+    PublicFormComponent,
+    FormInputComponent,
+    PromptTextComponent,
+    ValidateTooltipComponent,
+    DefaultButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
