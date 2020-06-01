@@ -1,15 +1,15 @@
 
 <main class="signup-container">
     <!-- Step 1: Form -->
-    <section>
+    <section *ngIf="signupStep === signupSteps.form">
         <app-prompt-header></app-prompt-header>
-        <app-public-form [formInputs]="formInputs"></app-public-form>
+        <app-public-form (formSubmit)="submit($event)" [formInputs]="formInputs"></app-public-form>
     </section>
 
     <!-- Step 2: Success -->
-    <section>
+    <section *ngIf="signupStep === signupSteps.success && signupUser">
         <app-prompt-header></app-prompt-header>
-        <p></p>
-        <app-default-button></app-default-button>
+        <p>{{ signupUser.email }}</p>
+        <button class="btn-default">Sign In</button>
     </section>
 </main>

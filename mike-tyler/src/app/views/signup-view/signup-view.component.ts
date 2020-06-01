@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { InputClass, InputType } from '../../components/forms/input-types/input-base';
+import { SignupUser } from 'src/app/models/signup-user';
+
+enum signupSteps {
+    form,
+    success
+}
 
 @Component({
     selector: 'app-signup-view',
@@ -10,6 +16,10 @@ import { InputClass, InputType } from '../../components/forms/input-types/input-
 export class SignupViewComponent implements OnInit {
 
     formInputs: InputClass<string>[] = [];
+    signupStep = signupSteps.form;
+    signupUser: SignupUser;
+
+    signupSteps = signupSteps;
 
     constructor() { }
 
@@ -37,6 +47,17 @@ export class SignupViewComponent implements OnInit {
                 type: InputType.password
             })
         ];
+    }
+
+    submit(model: FormGroup) {
+        this.signupUser = {
+            firstName: model.value.firstName,
+            email: model.value.emailAddress,
+            password: model.value.password
+        };
+        console.log(this.signupUser);
+        // Send off user payload to server and await success
+        this.signupStep = signupSteps.success;
     }
 
 }

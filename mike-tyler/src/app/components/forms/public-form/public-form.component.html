@@ -2,5 +2,5 @@
     <div *ngFor="let input of formInputs">
         <app-form-input [inputModel]="input" [form]="formModel"></app-form-input>
     </div>
-    <app-default-button></app-default-button>
+    <button type="submit" class="btn-default" [disabled]="!formModel.valid">Sign Up</button>
 </form>

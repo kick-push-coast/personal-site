@@ -18,11 +18,12 @@ export class PublicFormComponent implements OnInit {
 
     ngOnInit() {
         this.formModel = this.toFormGroup(this.formInputs);
-        console.log(this.formInputs);
     }
 
     submit() {
-        // Add submit code
+        if (this.formModel.valid) {
+            this.formSubmit.emit(this.formModel);
+        }
     }
 
     toFormGroup(inputs: InputClass<string>[] ) {
