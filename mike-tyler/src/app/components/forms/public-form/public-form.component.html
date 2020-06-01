@@ -1,0 +1,6 @@
+<form (ngSubmit)="submit()" [formGroup]="formModel">
+    <div *ngFor="let input of formInputs">
+        <app-form-input [inputModel]="input" [form]="formModel"></app-form-input>
+    </div>
+    <app-default-button></app-default-button>
+</form>

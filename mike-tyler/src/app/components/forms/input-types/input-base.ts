@@ -1,10 +1,3 @@
-export enum InputType {
-    none = '',
-    text = 'text',
-    email = 'email',
-    password = 'password'
-}
-
 export class InputClass<T> {
     value: T;
     key: string;
@@ -27,4 +20,11 @@ export class InputClass<T> {
         this.required = !!options.required;
         this.type = options.type || InputType.none;
     }
+}
+
+export enum InputType {
+    none = '',
+    text = 'text',
+    email = 'email',
+    password = 'password'
 }
