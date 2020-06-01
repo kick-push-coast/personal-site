@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { InputClass, InputType } from '../../components/forms/input-types/input-base';
 import { SignupUser } from 'src/app/models/signup-user';
+import {
+    trigger,
+    style,
+    animate,
+    transition
+  } from '@angular/animations';
 
 enum signupSteps {
     form,
@@ -11,7 +17,19 @@ enum signupSteps {
 @Component({
     selector: 'app-signup-view',
     templateUrl: './signup-view.component.html',
-    styleUrls: ['./signup-view.component.scss']
+    styleUrls: ['./signup-view.component.scss'],
+    animations: [
+      trigger('fadeIn', [
+          transition(
+              ':enter',
+              [
+                  style({ opacity: 0 }),
+                  animate('400ms ease-in',
+                        style({ opacity: 1 }))
+              ]
+          )
+      ])
+    ]
 })
 export class SignupViewComponent implements OnInit {
 

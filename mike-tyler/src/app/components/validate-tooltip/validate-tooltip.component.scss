@@ -1,27 +1,27 @@
-$triangle-size: 8px;
+$triangle-width: 8px;
+$triangle-height: 6px;
 
-.tooltip-right {
+.tooltip-validate {
     border-top: 6px solid #8303bc;
     position: absolute;
-    left: 100%;
     width: 180px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: $triangle-size;
+    left: 0;
+    top: 100%;
+    margin-top: $triangle-height;
+    z-index: 10;
     .tooltip-list {
         padding-left: 20px;
         margin-bottom: 0;
     }
     &::before {
         content: '';
-        border-right: solid $triangle-size #fff;
-        border-left: solid $triangle-size transparent;
-        border-top: solid $triangle-size transparent;
-        border-bottom: solid $triangle-size transparent;
         position: absolute;
-        right: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: $triangle-size;
+        border-right: solid $triangle-width transparent;
+        border-left: solid $triangle-width transparent;
+        border-top: solid $triangle-height transparent;
+        border-bottom: solid $triangle-height #8303bc;
+        left: 50%;
+        bottom: calc(100% + 6px) ;
+        transform: translateX(-50%);
     }
 }

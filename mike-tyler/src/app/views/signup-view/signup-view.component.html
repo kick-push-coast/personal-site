@@ -1,6 +1,6 @@
 
-<div class="signup-container">
-    <main class="signup-prompt p-5 br-12 bs-popover">
+<div @fadeIn class="signup-container">
+    <main class="signup-prompt br-12 bs-popover">
         <!-- Step 1: Form -->
         <section *ngIf="signupStep === signupSteps.form">
             <app-prompt-text>

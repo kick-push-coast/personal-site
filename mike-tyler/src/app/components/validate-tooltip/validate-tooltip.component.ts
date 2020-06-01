@@ -15,9 +15,9 @@ import {
         transition(
             ':enter',
             [
-                style({ opacity: 0, transform: 'translate(10px, -50%)' }),
+                style({ opacity: 0, transform: 'translateY(10px)' }),
                 animate('200ms 200ms ease-in',
-                      style({ opacity: 1, transform: 'translate(0, -50%)' }))
+                      style({ opacity: 1, transform: 'translateY(0)' }))
             ]
         )
     ])
