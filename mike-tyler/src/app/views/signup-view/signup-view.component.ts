@@ -75,7 +75,7 @@ export class SignupViewComponent implements OnInit {
             email: model.value.emailAddress,
             password: model.value.password
         };
-        // Send off user payload to server and await success
+        // Emulating sending off user payload to server and awaiting success
         setTimeout(() => {
             this.signupStep = signupSteps.success;
             this.loading = false;
