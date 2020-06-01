@@ -10,7 +10,6 @@ import { InputClass, InputType } from '../../components/forms/input-types/input-
 export class SignupViewComponent implements OnInit {
 
     formInputs: InputClass<string>[] = [];
-    signupModel: FormGroup;
 
     constructor() { }
 
@@ -38,18 +37,6 @@ export class SignupViewComponent implements OnInit {
                 type: InputType.password
             })
         ];
-        this.signupModel = this.toFormGroup(this.formInputs);
     }
-
-    toFormGroup(inputs: InputClass<string>[] ) {
-        const group: any = {};
-
-        inputs.forEach(input => {
-          group[input.key] = input.required ?
-                                new FormControl(input.value || '', Validators.required) :
-                                new FormControl(input.value || '');
-        });
-        return new FormGroup(group);
-      }
 
 }

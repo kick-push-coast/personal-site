@@ -18,6 +18,11 @@ import { DotGameComponent } from './components/dot-game/dot-game.component';
 import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
 import { PersonalLayoutComponent } from './layout/personal-layout/personal-layout.component';
 import { SignupViewComponent } from './views/signup-view/signup-view.component';
+import { PublicFormComponent } from './components/forms/public-form/public-form.component';
+import { FormInputComponent } from './components/forms/form-input/form-input.component';
+import { DefaultButtonComponent } from './components/buttons/default-button/default-button.component';
+import { PromptHeaderComponent } from './components/prompt-header/prompt-header.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,13 +39,18 @@ import { SignupViewComponent } from './views/signup-view/signup-view.component';
     DotGameComponent,
     PublicLayoutComponent,
     PersonalLayoutComponent,
-    SignupViewComponent
+    SignupViewComponent,
+    PublicFormComponent,
+    FormInputComponent,
+    DefaultButtonComponent,
+    PromptHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
