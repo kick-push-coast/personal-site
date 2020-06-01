@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PromptHeaderComponent } from './prompt-header.component';
+import { PromptTextComponent } from './prompt-text.component';
 
-describe('PromptHeaderComponent', () => {
-  let component: PromptHeaderComponent;
-  let fixture: ComponentFixture<PromptHeaderComponent>;
+describe('PromptTextComponent', () => {
+  let component: PromptTextComponent;
+  let fixture: ComponentFixture<PromptTextComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PromptHeaderComponent ]
+      declarations: [ PromptTextComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PromptHeaderComponent);
+    fixture = TestBed.createComponent(PromptTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

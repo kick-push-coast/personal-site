@@ -20,7 +20,7 @@ import { PersonalLayoutComponent } from './layout/personal-layout/personal-layou
 import { SignupViewComponent } from './views/signup-view/signup-view.component';
 import { PublicFormComponent } from './components/forms/public-form/public-form.component';
 import { FormInputComponent } from './components/forms/form-input/form-input.component';
-import { PromptHeaderComponent } from './components/prompt-header/prompt-header.component';
+import { PromptTextComponent } from './components/prompt-text/prompt-text.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -41,7 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupViewComponent,
     PublicFormComponent,
     FormInputComponent,
-    PromptHeaderComponent
+    PromptTextComponent
   ],
   imports: [
     BrowserModule,
