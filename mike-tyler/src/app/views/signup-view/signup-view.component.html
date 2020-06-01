@@ -1,29 +1,33 @@
 
-<main class="signup-container">
-    <!-- Step 1: Form -->
-    <section *ngIf="signupStep === signupSteps.form">
-        <app-prompt-text>
-            <div header>
-                Let's <strong class="d-block">Sign Up</strong>
-            </div>
-            <p info>
-                Use the form below to sign up for this super awesome service. You're only a few steps away!
-            </p>
-        </app-prompt-text>
-        <app-public-form (formSubmit)="submit($event)" [formInputs]="formInputs"></app-public-form>
-    </section>
+<div class="signup-container">
+    <main class="signup-prompt p-5 br-12 bs-popover">
+        <!-- Step 1: Form -->
+        <section *ngIf="signupStep === signupSteps.form">
+            <app-prompt-text>
+                <div header>
+                    Let's <strong class="d-block">Sign Up</strong>
+                </div>
+                <p info>
+                    Use the form below to sign up for this super awesome service. You're only a few steps away!
+                </p>
+            </app-prompt-text>
+            <app-public-form (formSubmit)="submit($event)" [formInputs]="formInputs"></app-public-form>
+        </section>
 
-    <!-- Step 2: Success -->
-    <section *ngIf="signupStep === signupSteps.success">
-        <app-prompt-text>
-            <div header>
-                Welcome <strong class="d-block">{{ signupUser.firstName }}!</strong>
+        <!-- Step 2: Success -->
+        <section *ngIf="signupStep === signupSteps.success">
+            <app-prompt-text>
+                <div header>
+                    Welcome, <strong class="d-block">{{ signupUser.firstName }}!</strong>
+                </div>
+                <p info>
+                    You have been registered for this awesome service. Please check your email listed below for instructions.
+                </p>
+            </app-prompt-text>
+            <p class="mb-3 text-sm text-bold">{{ signupUser.email }}</p>
+            <div class="text-right">
+                <button class="btn-default">Sign In</button>
             </div>
-            <p info>
-                You have been registered for this awesome service. Please check your email listed below for instructions.
-            </p>
-        </app-prompt-text>
-        <p>{{ signupUser.email }}</p>
-        <button class="btn-default">Sign In</button>
-    </section>
-</main>
+        </section>
+    </main>
+</div>

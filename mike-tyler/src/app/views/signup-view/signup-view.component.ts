@@ -27,14 +27,14 @@ export class SignupViewComponent implements OnInit {
         this.formInputs = [
             new InputClass({
                 key: 'firstName',
-                label: 'First Name',
+                label: 'First name',
                 value: '',
                 required: true,
                 type: InputType.text
             }),
             new InputClass({
                 key: 'emailAddress',
-                label: 'Email Adress',
+                label: 'Email address',
                 value: '',
                 required: true,
                 type: InputType.email
@@ -55,7 +55,6 @@ export class SignupViewComponent implements OnInit {
             email: model.value.emailAddress,
             password: model.value.password
         };
-        console.log(this.signupUser);
         // Send off user payload to server and await success
         this.signupStep = signupSteps.success;
     }
